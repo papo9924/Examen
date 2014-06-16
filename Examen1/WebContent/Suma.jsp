@@ -1,27 +1,28 @@
-<%@ page language="java" contentType="text/html;"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>SUMA</title>
+<title>Suma</title>
 </head>
 <body>
+
 <script>
 function validation(){
-	var X=document.forms["suma"]["X"].value;
-	var Y=document.forms["suma"]["Y"].value;
-	if(!X){
-		alert("X numero Vacio");
+	var campo1=document.forms["Suma"]["X"].value;
+	var campo2=document.forms["Suma"]["Y"].value;
+	if(!campo1){
+		alert("Campo 1 vacío");
 		return false;
-	}else if(!Y){
-		alert("Y numero Vacio");
+	}else if(!campo2){
+		alert("Campo 2 vacío");
 		return false;
 	}
 	return true;
 }
 </script>
-<form name="Suma" method="post" action="Servlet" onsubmit="return validation()">
+<form name="Suma" method="post" action="calcusuma" onsubmit="return validation()">
 <table>
 <tr>
 	<td>X</td>
@@ -42,5 +43,6 @@ function validation(){
 	</tr>
 </table>
 </form>
+
 </body>
 </html>
